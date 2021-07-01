@@ -12,18 +12,6 @@ resource "aws_ecs_task_definition" "my_first_task" {
           "hostPort": 80
         }
       ],
-      "environment": [
-            {"name": "REACT_APP_API_URL",
-            "value": "http://backend-lb-tf-1811757815.us-east-2.elb.amazonaws.com"}
-      ],
-      "logConfiguration": {
-                "logDriver": "awslogs",
-                "options": {
-                    "awslogs-group": "awslogs-frontend",
-                    "awslogs-region": "us-east-2",
-                    "awslogs-stream-prefix": "frontend"
-                }
-            },
       "memory": 512,
       "cpu": 256
     }
